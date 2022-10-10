@@ -1,0 +1,638 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins',sans-serif;
+	text-decoration: none;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-transform: capitalize;
+}
+
+
+html{
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body{
+	background-color: white;
+	
+}
+
+section{
+	min-height: 100vh;
+	padding: 0 9%;
+	padding-top: 7.5rem;
+	padding-bottom: 2rem;
+
+}
+.btn{
+	display: inline-block;
+	margin-top: 1rem;
+	padding: .8rem 3rem;
+	border-radius: 5rem;
+	font-size: 1.7rem;
+	color: #fff;
+	cursor: pointer;
+	transition: all .3s linear;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+	background:linear-gradient(90deg,#814096,#F83292) ;
+}
+.btn:hover{
+	transform: scale(1.1);
+}
+
+.heading{
+	text-align: center;
+	background:linear-gradient(90deg,#814096,#F83292) ;
+	color: transparent;
+	-webkit-background-clip: text;
+    background-clip: text;
+    text-transform: capitalize;
+     font-size: 3.5rem;
+      padding:1rem;
+
+}
+
+/*here code is header part*/
+header{
+	position: fixed;
+	top: 0;
+	left:0;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+	padding: 2rem 9%;
+	display: flex;
+	z-index: 1000;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+header .logo{
+	font-size: 2rem;
+	color: #814096;
+}
+
+header .logo span {
+	color:#F83292;
+}
+
+header .navbar a{
+	font-size: 1.7rem;
+	margin-left: 2rem;
+	color: #814096;
+
+}
+header .navbar a:hover{
+	color:#F83292;
+
+}
+
+header input{
+	display: none; 
+	
+
+}
+
+header label{
+	font-size: 3rem;
+	color: #814096;
+	cursor: pointer; 
+	visibility: hidden;   
+	opacity: 0;
+}
+
+
+/*home section code start here*/
+/*background image are not suppurted so im using only background for image*/
+.home{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	background-position: center;
+	background: url('image/home-bg-img.png') no-repeat;
+}
+
+.home .hero-img img{
+	z-index: -1;
+	width: 40vw;
+	animation: float 3s linear infinite;
+}
+
+@keyframes float{ 
+	0%,100%{
+		transform: translateY(0rem);
+	}
+	50%{
+		transform: translateY(-3.5rem);
+	}
+ }
+
+
+.home .content h3{
+	font-size: 5.5rem;
+	color: #333;
+	text-transform: uppercase;
+}
+
+.home .content h3 span{
+	text-transform: uppercase;
+	color: pink;
+}
+
+.home .content p{
+	font-size: 1.5rem;
+	color: #333;
+	padding: 1rem 0;
+	text-transform: uppercase;
+}
+
+/*feature section code here*/
+.features .box-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.features .box-container .box{
+
+	flex:1 1 30rem;
+    background:#fff;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin:1.5rem;
+    padding:3rem 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    transition: .2s linear;
+    -webkit-animation: tilt 8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: tilt 8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.features .box-container .box:nth-child(2)
+{
+    -webkit-animation: tilt 10s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: tilt 10s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.features .box-container .box:nth-child(2)
+{
+    -webkit-animation: tilt 12s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: tilt 12s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes tilt {
+  0% {
+    -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+            transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+            transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt {
+  0% {
+    -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+            transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+            transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
+  }
+}
+
+
+.features .box-container .box img{
+    height: 10rem;
+}
+
+.features .box-container .box h3{
+    font-size: 2rem;
+    color:#333;
+    padding-top: 1rem;
+}
+
+.features .box-container .box p{
+    font-size: 1.3rem;
+    color:#666;
+    padding: 1rem 0;
+}
+/*about section code here*/
+
+.about{
+    background:url(image/about-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 3rem;
+}
+
+.about .column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .column .image{
+    flex:1 1 40rem;
+}
+
+.about .column .image img{
+	animation: float 3s linear infinite;
+    width:100%;
+}
+
+.about .column .content{
+    flex:1 1 40rem;
+}
+
+.about .column .content h3{
+    font-size: 3rem;
+    color:#666;
+}
+
+.about .column .content p{
+    font-size: 1.5rem;
+    color:#666;
+    padding:1rem 0;
+}
+
+.about .column .content .buttons a:last-child{
+    margin-left: 2rem;
+}
+/*newslwtter section code here*/
+
+
+.newsletter{
+    text-align: center;
+    padding:5rem 1rem;
+    background:url(image/subscribe-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.newsletter h3{
+    color:#fff;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.newsletter p{
+    color:#fff;
+    font-size: 1.6rem;
+    margin:2rem auto;
+    width:70rem;
+}
+
+.newsletter form{
+    display: flex;
+    max-width: 70rem;
+    border:.2rem solid #fff;
+    padding:.5rem;
+    border-radius: 5rem;
+    margin:2rem auto; 
+    height:5.5rem;
+}
+
+.newsletter form input[type="email"]{
+    padding:0 2rem;
+    font-size: 1.7rem;
+    background:none;
+    width:100%;
+    color:#fff;
+    text-transform: none;
+    background:none;
+}
+
+.newsletter form input[type="email"]::placeholder{
+    color:#eee;
+    text-transform: capitalize;
+}
+
+.newsletter form input[type="submit"]{
+    background:#fff;
+    width:20rem;
+    font-size: 1.7rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.newsletter form input[type="submit"]:hover{
+    color:var(--pink);
+}
+
+
+/*pricing code here*/
+
+
+.pricing .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pricing .box-container .box{
+    flex:1 1 27rem;
+    margin:1rem;
+    padding:1rem;
+    background:#fff;
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.pricing .box-container .box:nth-child(2),
+.pricing .box-container .box:hover{
+    border:.3rem solid pink;
+}
+
+.pricing .box-container .box .title{
+    color:purple;
+    font-size: 2.5rem;
+    padding-top: 1rem;
+}
+
+.pricing .box-container .box .price{
+    font-size: 4rem;
+    color:pink;
+    padding:1rem 0;
+}
+
+.pricing .box-container .box .price span{
+    font-size: 2rem;
+}
+
+.pricing .box-container .box ul{
+    padding:1rem 0;
+    list-style: none;
+}
+
+.pricing .box-container .box ul li{
+    font-size: 1.7rem;
+    color:#666;
+    padding:.5rem 0;
+}
+
+.pricing .box-container .box ul li .fa-check{
+    color:lightgreen;
+}
+
+.pricing .box-container .box ul li .fa-times{
+    color:tomato;
+}
+
+
+
+/*contact form section*/
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 4rem;
+}
+
+.contact .image{
+    flex:1 1 40rem;
+}
+
+.contact .image img{
+    width:100%;
+    padding:2rem;
+}
+
+.contact form{
+    flex:1 1 40rem;
+    padding:2rem 3rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    background:#fff;
+}
+
+.contact form .heading{
+    text-align: left;
+    padding:0;
+    padding-bottom: 2rem;
+}
+
+.contact form .inputBox{
+    position: relative;
+}
+
+.contact form .inputBox input, .contact form .inputBox textarea{
+    width:100%;
+    background:none;
+    color:#666;
+    margin:1.5rem 0;
+    padding:.5rem 0;
+    font-size: 1.7rem;
+    border-bottom: .1rem solid rgba(0,0,0,.1);
+    text-transform: none;
+}
+
+.contact form .inputBox textarea{
+    resize: none;
+    height: 13rem;
+}
+
+.contact form .inputBox label{
+    position: absolute;
+    top:1.7rem; left:0;
+    font-size: 1.7rem;
+    color:#666;
+    transition: .2s linear;
+}
+
+.contact form .inputBox input:focus ~ label,
+.contact form .inputBox input:valid ~ label,
+.contact form .inputBox textarea:focus ~ label,
+.contact form .inputBox textarea:valid ~ label{
+    top:-.5rem;
+    font-size: 1.5rem;
+    color:var(--pink);
+}
+
+
+
+/*footer section code*/
+
+.footer{
+    
+    background:url(image/footer-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 3rem;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    flex:1 1 25rem;
+    margin:2rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding:1rem 0;
+    color:#fff;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    padding:.5rem 0;
+    color:#eee;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding:.5rem 0;
+    color:#eee;
+}
+
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+.footer .box-container .box .info{
+    display: flex;
+    align-items: center;
+}
+
+.footer .box-container .box .info i{
+    margin:.5rem 0;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background:#fff;
+    color:var(--pink);
+    font-size: 1.5rem;
+    height:4.5rem;
+    width:4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+}
+
+.footer .credit{
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: .1rem;
+    color:#fff;
+    border-top: .1rem solid #fff5;
+    padding:2.5rem 1rem;
+    text-align: center;
+}
+
+
+
+
+
+
+/*media queries start*/
+
+
+@media(max-width:1200px) {
+	html{
+		font-size: 55%;
+	}
+
+}
+
+
+@media(max-width:991px) {
+	section{
+	padding: 0 3%;
+	padding-top: 7.5rem;
+
+    }
+
+}
+
+@media(max-width:768px) {
+	header label
+	{
+	 	cursor: pointer; 
+		visibility: visible;   
+		opacity: 1;
+	}
+
+
+	header .navbar{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: #fff;
+		padding: 1rem 2rem;
+		border-top: .2rem solid rgba(0,0,0,0.2);
+		box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+		transform-origin: left;
+		transform: scaleY(0);
+		opacity: 0;
+		transition: 0.2s;
+	}
+	header .navbar a{
+		display: block;
+		margin: 2rem 12rem;
+		font-size: 2rem ;
+	}
+
+	header input:checked ~ .navbar{
+		opacity: 1;
+		transform: scaleY(1); /*will be show menu*/
+	}
+	header input:checked ~ label::before {
+		content: '\f00d';
+	}
+	.home{
+		flex-flow: column-reverse;
+	}
+	.home .hero-img img{
+		width: 100%;
+	} 
+	.home .content h3{
+		font-size: 3.6rem;
+	}
+	.home .content p{
+		font-size: 1.2rem;
+	}
+	.about{
+		background-position: right;
+	}
+	.newsletter p{
+		width: auto;
+	}
+}
+
+
+@media(max-width:450px) {
+	html{
+		font-size: 15%;
+		text-align: center;
+	}
+	.about .column .content .buttons a:last-child {
+		margin: 1rem 0 ;
+	}
+
+}
+
+
