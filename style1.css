@@ -560,6 +560,7 @@ header label{
 
 @media(max-width:991px) {
 	section{
+         height:auto;
 	padding: 0 3%;
 	padding-top: 7.5rem;
 
